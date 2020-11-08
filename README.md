@@ -55,8 +55,8 @@ All project wide settings should be done through environment variables
 - `PISMA_PORT` - port to run application server. Default is `8888`
 
 ### Database settings
-- `PISMA_DJANGO_SQL_ENGINE` - SQL engine for Django. Default is `django.db.backends.sqlite3`. Also tested with `django.db.backends.postgresql`. Look at Django documentation for all values
-- `PISMA_DATABASE_URL` - URL to connect to database in format `{database vendor}://{login}:{password}@{host}:{port}/{databse name}`. Required if `PISMA_DJANGO_SQL_ENGINE` is not set to default value. Default is empty string. 
+- `PISMA_DJANGO_SQL_ENGINE` - SQL engine for Django. Default is `django.db.backends.sqlite3`. `django.db.backends.postgresql` also supported
+- `PISMA_DATABASE_URL` - URL to connect to database in format `{database vendor}://{login}:{password}@{host}:{port}/{databse name}`. Required if `PISMA_DJANGO_SQL_ENGINE` is not set to `django.db.backends.sqlite3`. Default is empty string 
 
 ### Logging level settings
 - `PISMA_DJANGO_ROOT_LOGGING_LEVEL` - root logging level setting. Default is `ERROR`. Sends logs to `logs/errors.log` and console
@@ -72,7 +72,7 @@ You need to create `docker-compose.yml` in the project root directory. There are
 
 - `docker-compose-sqlite.yml` - creates container with PISMA and SQLite as your database. Great for small projects and development environment 
 - `docker-compose-with-postgresql.yml` - creates two containers: one with PISMA and one with PostgreSQL. Connects PISMA to this PostgreSQL database
-- `docker-compose-external-database.yml` - if you already has database that you want to use this option is for you
+- `docker-compose-external-database.yml` - if you already have a database that you want to use this option is for you
 
 ### Deployment
 After you created `docker-compose.yml` you can run `scripts/init_docker.sh` to deploy Pega Infinity SMA

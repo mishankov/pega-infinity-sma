@@ -1,6 +1,6 @@
 appdirs==1.4.4
 asgiref==3.3.4
-attrs==20.3.0
+attrs==21.2.0
 black==21.5b0
 certifi==2020.12.5
 chardet==4.0.0
@@ -18,5 +18,5 @@ toml==0.10.2
 typed-ast==1.4.3
 typing-extensions==3.10.0.0
 urllib3==1.26.4
-Werkzeug==1.0.1
+Werkzeug==2.0.0
 whitenoise==5.2.0
